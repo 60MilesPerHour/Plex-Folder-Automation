@@ -1,9 +1,19 @@
-# Plex-Automation
-Automatically create Plex folders and sub folders for Plex media (Music, TV)
+# Plex Music Folder Automation
+
+If you have ever run a plex media server and had to store your songs and couldn’t get plex to correctly organize the files so you had to make all the folders by hand then you have found the right script. Plex music automation takes the hassle out of constant folder creation with hectic copy and pasting.
+
+(this script is planned for upgrades very soon)
 
 
-So... i hate organizing files in plex... so... i got my computer to do it for me!
+## Code Snippet
 
-still requires input from the user but it takes away all the annoying crap you'd usually have to deal with without this script
+```
+import os
+import sys
+import time
 
-also this can be easily altered for TV shows if you need that too!
+print("this is your current directory right now", os.getcwd()) # Not needed but is useful
+
+os.chdir(input("Input desired Music location: ")) # Change Directory to where the magic will happen :)
+print(os.getcwd())
+```
